@@ -47,8 +47,14 @@
             if(!isset($this->data[$key]))
                 throw new \Exception("The key $key does not exist in the endpoint ". get_class($this));
 
+            if(isset($this->prohibited) && array_key_exists($key, $this->prohibited))
+                throw new \Exception("The key $key is prohibited by setting value because has an specific template, use the end point method ". get_class($this). "::set_". $key);
+
             if(isset($this->convert) && array_key_exists($key, $this->convert))
                 settype($value, $this->convert[$key]);
+
+            if(isset($this->allowed) && array_key_exists($key, $this->allowed) && !in_array($value, $this->allowed[$key]))
+                throw new \Exception("The value $value is not allowed for the key $key in the endpoint ". get_class($this));
 
             $this->data[$key] = $value;
         }
@@ -92,6 +98,11 @@
 
             foreach($this->data as $key => $value)
             {
+                if(is_array($value) && sizeof($value) > 0) {
+                    $data[$key] = json_encode($value);
+                    continue;
+                }
+
                 if(!empty($value))
                     $data[$key] = $value;
             }
