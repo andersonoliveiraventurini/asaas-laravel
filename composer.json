@@ -1,0 +1,28 @@
+{
+    "name": "andmarruda/asaas-laravel",
+    "description": "Laravel package for Asaas API",
+    "type": "library",
+    "keywords": ["asaas", "laravel", "api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anderson Arruda",
+            "email": "andmarruda@gmail.com",
+            "homepage": "https://andersonarruda.com.br"
+        },
+        {
+            "name": "Sysborg",
+            "email": "contato@sysborg.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "laravel/framework": ">=9.0"
+    },
+    "autoload": {
+
+    },
+    "extra": {
+
+    }
+}
