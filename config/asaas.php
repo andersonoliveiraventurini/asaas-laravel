@@ -5,4 +5,5 @@ return [
     "sandbox_url" => env("ASAAS_SANDBOX_URL", "https://sandbox.asaas.com/api/"),
     "access_token" => env("ASAAS_ACCESS_TOKEN", ""),
     "environment" => env("ASAAS_ENVIRONMENT", "sandbox"), // sandbox or production
+    "middleware" => [], // array of middlewares to be used in routes
 ];
