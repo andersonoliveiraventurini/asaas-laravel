@@ -3,7 +3,7 @@
 
     use Andmarruda\Asaas\DataMethods;
 
-    class Create extends DataMethods
+    class CustomersList extends DataMethods
     {
         /**
          * Endpoint URL
@@ -15,45 +15,35 @@
          * Request method
          * @var string
          */
-        protected $method = 'POST';
-
+        protected $method = 'GET';
+        
         /**
          * Variable that can handle with all possible data of this endpoint
          * @var array
          */
         protected $data = [
             'name' => '',
-            'cpfCnpj' => '',
             'email' => '',
-            'phone' => '',
-            'mobilePhone' => '',
-            'address' => '',
-            'addressNumber' => '',
-            'complement' => '',
-            'province' => '',
-            'postalCode' => '',
-            'externalReference' => '',
-            'notificationDisabled' => false,
-            'additionalEmails' => '',
-            'municipalInscription' => '',
-            'stateInscription' => '',
-            'observations' => '',
+            'cpfCnpj' => '',
             'groupName' => '',
-            'company' => ''
+            'externalReference' => '',
+            'offset' => 0,
+            'limit' => 25
         ];
 
         /**
          * Required data to create a customer
          * @var array
          */
-        protected $required = ['name', 'cpfCnpj'];
+        protected $required = [];
 
         /**
          * Set data convertion
          * @var array
          */
         protected $convert = [
-            'notificationDisabled' => 'bool',
+            'offset' => 'int',
+            'limit' => 'int'
         ];
     }
 ?>
