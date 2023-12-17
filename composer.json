@@ -24,10 +24,12 @@
             "Andmarruda\\Asaas": "./Asaas/",
             "Andmarruda\\Asaas\\Controllers": "./Controllers/",
             "Andmarruda\\Asaas\\Events": "./Events/",
+            "Andmarruda\\Asaas\\Factories": "./Factories/",
             "Andmarruda\\Asaas\\Listeners": "./Listeners/",
             "Andmarruda\\Asaas\\Migrations": "./Migrations/",
             "Andmarruda\\Asaas\\Models": "./Models/",
             "Andmarruda\\Asaas\\Providers": "./Providers/",
+            "Andmarruda\\Asaas\\Seeders": "./Seeders/",
             "Andmarruda\\Asaas\\Tests": "./Tests/"
         }
     },
